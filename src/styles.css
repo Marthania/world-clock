@@ -3,15 +3,16 @@ body{
     text-align: center;
 }
 .container{
-    margin: 0 auto;
+    margin: 10px auto;
     width: 50%;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px 8px rgba(0, 0, 0, 0.2);
 }
 select{
     width: 100%;
+    display: block;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -43,14 +44,14 @@ city:last-child{
 }
 .time{
     font-size: 36px;
-    font-weight: bold;
-    margin-top: 10px;
+    font-weight: bold
 }
 .time small{
     font-size: 16px;
     color: grey;
     vertical-align: middle;
-    line-height: 36px;
+    line-height: 48px;
+    
 }
 footer{
     margin-top: 20px;
