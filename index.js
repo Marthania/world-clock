@@ -55,8 +55,19 @@ function updateCity(event){
 updateTime();
 setInterval(updateTime, 1000);
 
+
 let citiesSelectElement=document.querySelector("#timezone");
 citiesSelectElement.addEventListener("change",updateCity);
+
+function changeTheme(){
+    let body=document.querySelector('body');
+    let container=document.querySelector('.container');
+    body.classList.toggle('dark-mode');
+    container.classList.toggle('dark-mode');
+    }
+    let themeButton=document.querySelector('.theme-button');
+
+    themeButton.addEventListener('click', changeTheme);
 
 
 
