@@ -1,11 +1,17 @@
-function updateTime(){
-let lisbonElement= document.querySelector("#lisbon");
-let LisbonTimeElement=lisbonElement.querySelector(".time");
-let LisbonDateElement=lisbonElement.querySelector(".date");
-let LisbonTime=moment().tz("Europe/Lisbon");
 
-LisbonDateElement.innerHTML=LisbonTime.format("MMM Do YYYY");
-LisbonTimeElement.innerHTML=LisbonTime.format("hh:mm:ss [<small>]A[<small>]");
+
+function updateTime(){
+let localTIme=moment().tz(moment.tz.guess());
+let localTimeElement=document.querySelector("#local-time");
+localTimeElement.innerHTML=localTIme.format("[local time] hh:mm:ss [<small>]a[<small>]");
+    //chicago
+let chicagoElement= document.querySelector("#chicago");
+let chicagoTimeElement=chicagoElement.querySelector(".time");
+let chicagoDateElement=chicagoElement.querySelector(".date");
+let chicagoTime=moment().tz("America/Chicago");
+
+chicagoDateElement.innerHTML=chicagoTime.format("MMM Do YYYY");
+chicagoTimeElement.innerHTML=chicagoTime.format("hh:mm:ss [<small>]A[<small>]");
 //london
 let londonElement= document.querySelector("#london");
 let londonTimeElement=londonElement.querySelector(".time");
